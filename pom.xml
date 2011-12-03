@@ -6,7 +6,7 @@
 
     <groupId>com.github.youribonnaffe</groupId>
     <artifactId>foobarqix</artifactId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
