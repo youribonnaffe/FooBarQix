@@ -33,6 +33,14 @@ public class FooBarQixAcceptanceTest {
     }
 
     @Test
+    public void developerExamples() {
+        String output = FooBarQix.oneToAHundred();
+
+        assertEquals("FooQixFoo", LineUtils.line(63, output));
+        assertEquals("QixQixQix", LineUtils.line(77, output));
+    }
+
+    @Test
     public void oneNumberPerLineWithAHundredLines() {
         String output = FooBarQix.oneToAHundred();
         assertEquals(100, LineUtils.numberOfLine(output));
