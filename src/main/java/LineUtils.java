@@ -1,4 +1,4 @@
-public class LineUtils {
+class LineUtils {
     public static String line(int lineNumber, String text) {
         return textAsArrayOfLines(text)[lineNumber - 1];
     }
