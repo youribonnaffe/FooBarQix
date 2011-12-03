@@ -2,21 +2,21 @@ public class FooBarQix {
 
     static final String LINE_SEPARATOR = System.getProperty("line.separator");
 
-    private static final String FOO = "Foo";
-    private static final String BAR = "Bar";
-    private static final String QIX = "Qix";
+    static final String FOO = "Foo";
+    static final String BAR = "Bar";
+    static final String QIX = "Qix";
 
-    private static final int THREE = 3;
-    private static final String THREE_AS_TEXT = String.valueOf(THREE);
+    static final int THREE = 3;
+    static final String THREE_AS_TEXT = String.valueOf(THREE);
 
-    private static final int FIVE = 5;
-    private static final String FIVE_AS_TEXT = String.valueOf(FIVE);
+    static final int FIVE = 5;
+    static final String FIVE_AS_TEXT = String.valueOf(FIVE);
 
-    private static final int SEVEN = 7;
-    private static final String SEVEN_AS_TEXT = String.valueOf(SEVEN);
+    static final int SEVEN = 7;
+    static final String SEVEN_AS_TEXT = String.valueOf(SEVEN);
 
-    private static final int OUTPUT_LOWER_LIMIT = 1;
-    private static final int OUTPUT_UPPER_LIMIT = 100;
+    static final int OUTPUT_LOWER_LIMIT = 1;
+    static final int OUTPUT_UPPER_LIMIT = 100;
 
     public static String oneToAHundred() {
         String output = "";
