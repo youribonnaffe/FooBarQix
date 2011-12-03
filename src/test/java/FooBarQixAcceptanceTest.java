@@ -45,6 +45,4 @@ public class FooBarQixAcceptanceTest {
         String output = FooBarQix.oneToAHundred();
         assertEquals(100, LineUtils.numberOfLine(output));
     }
-
-
 }

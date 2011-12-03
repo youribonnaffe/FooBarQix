@@ -2,7 +2,6 @@ public class FooBarQix {
 
     static final String LINE_SEPARATOR = System.getProperty("line.separator");
 
-
     static final int THREE = 3;
     static final String THREE_AS_TEXT = String.valueOf(THREE);
     static final String FOO = "Foo";
