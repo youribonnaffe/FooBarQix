@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 public class FooBarQixTest {
 
     @Test
-    public void testDivisionRule() throws Exception {
+    public void testRulesAreRespected() throws Exception {
         String output = FooBarQix.oneToAHundred();
         for (int lineNumber = FooBarQix.OUTPUT_LOWER_LIMIT; lineNumber <= FooBarQix.OUTPUT_UPPER_LIMIT; lineNumber++) {
             assertDivisionRuleIsRespected(lineNumber, LineUtils.line(lineNumber, output));
