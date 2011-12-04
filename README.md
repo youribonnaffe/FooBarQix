@@ -23,9 +23,13 @@ Navigation in packages on Github is so painful so this is just a way of simplify
 
 YAGNI, KISS, blahblah. Just to print something String works too.
 
+## And objects then?
+
+No state, no needs for objects
+
 ## At least I hope you applied TDD...
 
-That's what I tried, but TDD by book just feels stupid, especially on simple problems that can fit in your head. Since I had examples and precise specifications, I started by writing them as acceptance tests. Then I wrote the code, made the tests pass and wrote more tests.
+That's what I tried, but TDD by the book (going as far as running the tests with compilation errors) just feels slow, especially on simple problems that can fit in your head. Since I had examples and precise specifications, I started by writing them as acceptance tests. Then I wrote the code, made the tests pass and wrote more tests.
 
 ## What about awesomeness?
 
