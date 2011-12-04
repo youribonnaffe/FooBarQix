@@ -1,3 +1,5 @@
+package foobarqix;
+
 public class FooBarQix {
 
     static final String LINE_SEPARATOR = System.getProperty("line.separator");
@@ -28,12 +30,11 @@ public class FooBarQix {
     }
 
     private static String compute(int number) {
-        String result = "";
-        result += computeDivisionRules(number);
+        String result = computeDivisionRules(number);
         result += computeContentRules(number);
 
         if (result.isEmpty()) {
-            result = String.valueOf(number);
+            return String.valueOf(number);
         }
         return result;
     }
@@ -57,8 +58,8 @@ public class FooBarQix {
         return removeDigitLeft(numberAsTextReplaced);
     }
 
-    private static String removeDigitLeft(String numberAsTextReplaced) {
-        return numberAsTextReplaced.replaceAll("[0-9]*", "");
+    private static String removeDigitLeft(String text) {
+        return text.replaceAll("[0-9]*", "");
     }
 
     public static void main(String[] args) {

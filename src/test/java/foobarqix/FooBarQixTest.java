@@ -1,21 +1,25 @@
+package foobarqix;
+
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
 
+import static foobarqix.FooBarQix.*;
+import static foobarqix.LineUtils.line;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class FooBarQixTest {
     @Test
     public void testPreConditionsOnNumbers() {
-        int[] sortedNumbers = Arrays.copyOf(FooBarQix.NUMBERS, FooBarQix.NUMBERS.length);
+        int[] sortedNumbers = Arrays.copyOf(NUMBERS, NUMBERS.length);
         Arrays.sort(sortedNumbers);
-        Assert.assertArrayEquals(FooBarQix.NUMBERS, sortedNumbers);
-        assertArrayEquals(FooBarQix.NUMBERS_AS_TEXT, sortedNumbers);
+        Assert.assertArrayEquals(NUMBERS, sortedNumbers);
+        assertArrayEquals(NUMBERS_AS_TEXT, sortedNumbers);
 
-        assertEquals(FooBarQix.NUMBERS.length, FooBarQix.NUMBERS_AS_TEXT.length);
-        assertEquals(FooBarQix.NUMBERS.length, FooBarQix.REPLACEMENTS.length);
+        assertEquals(NUMBERS.length, NUMBERS_AS_TEXT.length);
+        assertEquals(NUMBERS.length, REPLACEMENTS.length);
     }
 
     private void assertArrayEquals(String[] texts, int[] ints) {
@@ -28,26 +32,26 @@ public class FooBarQixTest {
 
     @Test
     public void testRulesAreRespected() throws Exception {
-        String output = FooBarQix.oneToAHundred();
+        String output = oneToAHundred();
         for (int lineNumber = 1; lineNumber <= 100; lineNumber++) {
-            assertDivisionRuleIsRespected(lineNumber, LineUtils.line(lineNumber, output));
-            assertContentRuleIsRespected(lineNumber, LineUtils.line(lineNumber, output));
+            assertDivisionRuleIsRespected(lineNumber, line(lineNumber, output));
+            assertContentRuleIsRespected(lineNumber, line(lineNumber, output));
         }
     }
 
     private void assertDivisionRuleIsRespected(int lineNumber, String line) {
-        for (int i = 0; i < FooBarQix.NUMBERS.length; i++) {
-            if (lineNumber % FooBarQix.NUMBERS[i] == 0) {
-                assertLineContent(lineNumber, line, FooBarQix.REPLACEMENTS[i]);
+        for (int i = 0; i < NUMBERS.length; i++) {
+            if (lineNumber % NUMBERS[i] == 0) {
+                assertLineContent(lineNumber, line, REPLACEMENTS[i]);
             }
         }
     }
 
     private void assertContentRuleIsRespected(int lineNumber, String line) {
         String lineNumberAsText = String.valueOf(lineNumber);
-        for (int i = 0; i < FooBarQix.NUMBERS.length; i++) {
-            if (lineNumberAsText.contains(FooBarQix.NUMBERS_AS_TEXT[i])) {
-                assertLineContent(lineNumber, line, FooBarQix.REPLACEMENTS[i]);
+        for (int i = 0; i < NUMBERS.length; i++) {
+            if (lineNumberAsText.contains(NUMBERS_AS_TEXT[i])) {
+                assertLineContent(lineNumber, line, REPLACEMENTS[i]);
             }
         }
     }
